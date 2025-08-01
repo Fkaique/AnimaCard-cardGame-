@@ -21,19 +21,22 @@ if mouse_check_button_pressed(mb_right){
 #endregion
 
 #region List
-
 if position_meeting(mouse_x, mouse_y, self){
 	if c.clickl{
 		if ds_list_size(global.baralho)>0{
 			var _card = global.baralho[| 0]
-			var _inst = instance_create_layer(mouse_x, mouse_y,"Instances", obj_card)
-			_inst.image_index=_card-1
+			var _inst = instance_create_depth(mouse_x, mouse_y,depth-cards_qtd, obj_card)
+			cards_qtd++
+			_inst.image_index = (_card-1)%2
+			_inst.nome = global.grid_baralho[# cards.nome, _inst.image_index]
+			_inst.ataque = global.grid_baralho[# cards.ataque, _inst.image_index]
+			_inst.vida = global.grid_baralho[# cards.vida, _inst.image_index]
 			selected_card = _inst
 			ds_list_delete(global.baralho, 0)
 		}
 	}
 }
-if c.clickr{
+if c.clickr && selected_card != -1{
 	selected_card.selected = false;
 	selected_card = -1
 }
@@ -52,6 +55,7 @@ if _inst_card{
 		var _height  = ds_list_size(global.baralho)
 		global.baralho[| _height] = _inst_card.image_index + 1
 		instance_destroy(_inst_card)
+		cards_qtd--
 	}
 }
 

@@ -10,8 +10,9 @@
   },
   "defaultScriptType":1,
   "Folders":[
-    {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"fonts","folderPath":"folders/fonts.yy","name":"fonts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"objetos","folderPath":"folders/objetos.yy","name":"objetos","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"scripts","folderPath":"folders/scripts.yy","name":"scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"sprites","folderPath":"folders/sprites.yy","name":"sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
@@ -23,6 +24,8 @@
   },
   "name":"AnimaCard",
   "resources":[
+    {"id":{"name":"fnt_openSans_m","path":"fonts/fnt_openSans_m/fnt_openSans_m.yy",},},
+    {"id":{"name":"fnt_P052_p","path":"fonts/fnt_P052_p/fnt_P052_p.yy",},},
     {"id":{"name":"obj_baralho","path":"objects/obj_baralho/obj_baralho.yy",},},
     {"id":{"name":"obj_card","path":"objects/obj_card/obj_card.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
